@@ -1,0 +1,260 @@
+*** Running in verbose mode...
+
+Numeric: 51 (Az)
+Max Clients: 1023 (AP])
+Uplink Name: 198.50.192.218
+Uplink Port: 8888
+Server Name: channels.evilnet.org
+Server Description: UnderNet Services
+Loaded 49 command handlers
+
+*** [CMaster]: Attempting to make PostgreSQL connection to: 127.0.0.1; Database Name: cservice
+*** [CMaster]: Connection established to SQL server. 
+*** [CMaster::loadTranslationTable]: Loaded 22 languages.
+*** [CMaster::loadTranslationTable]: Loaded 919 translations.
+*** [CMaster::loadHelpTable]: Loaded 0 help messages.
+*** [CMaster::preloadChannelCache]: Loading all registered channel records: 
+*** [CMaster::preloadChannelCache]: Done. Loaded 3 registered channel records.
+*** [CMaster::preloadBanCache]: Precaching Bans table: 
+*** [CMaster::preloadBanCache]: Done. Loaded 0 bans.
+*** [CMaster::preloadLevelCache]: Precaching Level table: 
+*** [CMaster::preloadLevelCache]: Done. Loaded 3 level records out of 3.
+*** [CMaster::preloadUserCache]: Loading users accounts logged in within 1 days : 
+*** [CMaster::preloadUserCache]: Done. Loaded 1 user accounts.
+cservice::loadGlines> SELECT Id,Host,AddedBy,AddedOn,ExpiresAt,LastUpdated,Reason FROM glines
+cservice::OnAttach::sqlQuery> DELETE FROM webnotices WHERE created_ts < now()::abstime::int4 - 600)
+*** [CMaster::ImplementServer]:  Current DB server time: 1477962722
+Loaded client, nickname: E, with config file: cservice.conf
+*** Connected to 198.50.192.218, port 8888
+sqlUser::loadData> Attempting to load data for user-name: Christi
+sqlUser::loadData> SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname FROM users WHERE lower(user_name) = 'christi'
+iClient> Unknown user mode: a, in modes string: +oiwgxWar
+cmaster::getUserRecord> Cache hit for Speakz
+xServer::Process> Unable to find handler for: PRIVS
+xServer::Process> Unable to find handler for: PRIVS
+xServer::Process> Unable to find handler for: PRIVS
+cservice::logAdminMessage> Unable to locate debug channel on network!
+Completed net burst in 0 seconds, read 863 bytes and processed 10 commands
+*** Completed net burst
+Completed net burst in 0 seconds, read 871 bytes and processed 11 commands
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::checkIPR::sqlQuery> SELECT value,expiry,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NOT NULL) AND (expiry <> 0)) AND (type = 1)
+cservice::checkIPR::sqlQuery> SELECT value,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NULL) OR (expiry = 0)) AND (type = 1)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+sqlUser::commit> UPDATE users SET flags = 0, password = '07d976a29bdb3ff42e19c102852151b28097bbad', language_id = 1, maxlogins = 1, last_updated = now()::abstime::int4, last_updated_by = 'Speakz!speakz@Speakz.users.evilnet.org', totp_key = '', hostname = 'hello.com' WHERE id = 1
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::processDBUpdates]:sqlQuery: SELECT id,name,flags,mass_deop_pro,flood_pro,url,description,comment,keywords,registered_ts,channel_ts,channel_mode,userflags,last_updated,limit_offset,limit_period,limit_grace,limit_max,max_bans,no_take,now()::abstime::int4 as db_unixtime FROM channels WHERE last_updated >= 1477962722 AND registered_ts <> 0
+*** [CMaster::updateUsers]: sqlQuery: SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname,now()::abstime::int4 as db_unixtime FROM users WHERE last_updated >= 1477962722
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::updateLevels]: sqlQuery: SELECT channel_id,user_id,access,flags,suspend_expires,suspend_level,suspend_by,added,added_by,last_Modif,last_Modif_By,last_Updated,suspend_reason,now()::abstime::int4 as db_unixtime FROM levels WHERE last_updated >= 1477962722
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::checkIncomings> SELECT channels.id, channels.name, supporters.user_id, users.user_name, supporters.noticed FROM pending,supporters,channels,users WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND users.id = pending.manager_id AND pending.status = 0 AND supporters.support = '?'
+*** [CMaster::loadPendingChannelList]: Loading pending channel details.SELECT channels.name, pending.channel_id, user_id, pending.join_count, supporters.join_count, pending.unique_join_count, pending.first_init, pending.check_start_ts FROM pending,supporters,channels WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND pending.status = 1;
+cservice::logAdminMessage> Unable to locate debug channel on network!
+Loaded pending channels, there are currently 0 channels being recorded.
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::checkIncomings> SELECT channels.id, channels.name, supporters.user_id, users.user_name, supporters.noticed FROM pending,supporters,channels,users WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND users.id = pending.manager_id AND pending.status = 0 AND supporters.support = '?'
+*** [CMaster::loadPendingChannelList]: Loading pending channel details.SELECT channels.name, pending.channel_id, user_id, pending.join_count, supporters.join_count, pending.unique_join_count, pending.first_init, pending.check_start_ts FROM pending,supporters,channels WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND pending.status = 1;
+cservice::logAdminMessage> Unable to locate debug channel on network!
+Loaded pending channels, there are currently 0 channels being recorded.
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::processDBUpdates]:sqlQuery: SELECT id,name,flags,mass_deop_pro,flood_pro,url,description,comment,keywords,registered_ts,channel_ts,channel_mode,userflags,last_updated,limit_offset,limit_period,limit_grace,limit_max,max_bans,no_take,now()::abstime::int4 as db_unixtime FROM channels WHERE last_updated >= 1477962722 AND registered_ts <> 0
+*** [CMaster::updateUsers]: sqlQuery: SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname,now()::abstime::int4 as db_unixtime FROM users WHERE last_updated >= 1477962902
+*** [CMaster::updateLevels]: sqlQuery: SELECT channel_id,user_id,access,flags,suspend_expires,suspend_level,suspend_by,added,added_by,last_Modif,last_Modif_By,last_Updated,suspend_reason,now()::abstime::int4 as db_unixtime FROM levels WHERE last_updated >= 1477962722
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnEvent> Deauthenticated client: 0x65da50 from user: Speakz
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cmaster::getUserRecord> Cache hit for speakz
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::checkIPR::sqlQuery> SELECT value,expiry,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NOT NULL) AND (expiry <> 0)) AND (type = 1)
+cservice::checkIPR::sqlQuery> SELECT value,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NULL) OR (expiry = 0)) AND (type = 1)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+sqlUser::loadData> Attempting to load data for user-name: 
+sqlUser::loadData> SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname FROM users WHERE lower(user_name) = ''
+cmaster::getUserRecord> Cache hit for Speakz
+cservice::doCommonAuth::sqlQuery> SELECT last_seen FROM users_lastseen WHERE user_id=1
+sqlUser::commitLastSeen> UPDATE users_lastseen SET last_seen = 1477963233, last_hostmask = 'Speakz!speakz@c-24-60-219-135.hsd1.ma.comcast.net', last_ip = '24.60.219.135', last_updated = now()::abstime::int4 WHERE user_id = 1
+cservice::InsertUserHistory> INSERT INTO user_sec_history (user_id, user_name, command, ip, hostmask, timestamp) VALUES (1, 'Speakz', 'LOGIN', '24.60.219.135', 'Speakz!speakz@c-24-60-219-135.hsd1.ma.comcast.net', now()::abstime::int4)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::logPrivAdminMessage> Unable to locate prileved relay channel on network!
+cservice::doCommonAuth> SELECT channel_id,flags,suspend_expires FROM levels WHERE user_id = 1
+cservice::doCommonAuth::sqlQuery> SELECT channels.name,pending.manager_id,channels.id FROM supporters,channels,pending WHERE supporters.channel_id = channels.id AND pending.channel_id = channels.id AND channels.registered_ts = 0 AND supporters.support = '?' AND pending.status = 0 AND user_id = 1
+LOGIN::sqlQuery> SELECT message FROM notices WHERE user_id = 1 ORDER BY last_updated ASC
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::checkIPR::sqlQuery> SELECT value,expiry,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NOT NULL) AND (expiry <> 0)) AND (type = 1)
+cservice::checkIPR::sqlQuery> SELECT value,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NULL) OR (expiry = 0)) AND (type = 1)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+sqlUser::commit> UPDATE users SET flags = 2, password = '07d976a29bdb3ff42e19c102852151b28097bbad', language_id = 1, maxlogins = 1, last_updated = now()::abstime::int4, last_updated_by = 'Speakz!speakz@Speakz.users.evilnet.org', totp_key = '', hostname = 'evilnet.org' WHERE id = 1
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::processDBUpdates]:sqlQuery: SELECT id,name,flags,mass_deop_pro,flood_pro,url,description,comment,keywords,registered_ts,channel_ts,channel_mode,userflags,last_updated,limit_offset,limit_period,limit_grace,limit_max,max_bans,no_take,now()::abstime::int4 as db_unixtime FROM channels WHERE last_updated >= 1477962722 AND registered_ts <> 0
+*** [CMaster::updateUsers]: sqlQuery: SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname,now()::abstime::int4 as db_unixtime FROM users WHERE last_updated >= 1477962902
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::updateLevels]: sqlQuery: SELECT channel_id,user_id,access,flags,suspend_expires,suspend_level,suspend_by,added,added_by,last_Modif,last_Modif_By,last_Updated,suspend_reason,now()::abstime::int4 as db_unixtime FROM levels WHERE last_updated >= 1477962722
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::checkIncomings> SELECT channels.id, channels.name, supporters.user_id, users.user_name, supporters.noticed FROM pending,supporters,channels,users WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND users.id = pending.manager_id AND pending.status = 0 AND supporters.support = '?'
+*** [CMaster::loadPendingChannelList]: Loading pending channel details.SELECT channels.name, pending.channel_id, user_id, pending.join_count, supporters.join_count, pending.unique_join_count, pending.first_init, pending.check_start_ts FROM pending,supporters,channels WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND pending.status = 1;
+cservice::logAdminMessage> Unable to locate debug channel on network!
+Loaded pending channels, there are currently 0 channels being recorded.
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::checkIPR::sqlQuery> SELECT value,expiry,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NOT NULL) AND (expiry <> 0)) AND (type = 1)
+cservice::checkIPR::sqlQuery> SELECT value,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NULL) OR (expiry = 0)) AND (type = 1)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+sqlUser::commit> UPDATE users SET flags = 2, password = '07d976a29bdb3ff42e19c102852151b28097bbad', language_id = 1, maxlogins = 1, last_updated = now()::abstime::int4, last_updated_by = 'Speakz!speakz@Speakz.users.evilnet.org', totp_key = '', hostname = 'blahblah.com' WHERE id = 1
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::checkIPR::sqlQuery> SELECT value,expiry,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NOT NULL) AND (expiry <> 0)) AND (type = 1)
+cservice::checkIPR::sqlQuery> SELECT value,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NULL) OR (expiry = 0)) AND (type = 1)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+sqlUser::commit> UPDATE users SET flags = 2, password = '07d976a29bdb3ff42e19c102852151b28097bbad', language_id = 1, maxlogins = 1, last_updated = now()::abstime::int4, last_updated_by = 'Speakz!speakz@Speakz.users.evilnet.org', totp_key = '', hostname = 'testlab.com' WHERE id = 1
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::checkIncomings> SELECT channels.id, channels.name, supporters.user_id, users.user_name, supporters.noticed FROM pending,supporters,channels,users WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND users.id = pending.manager_id AND pending.status = 0 AND supporters.support = '?'
+*** [CMaster::loadPendingChannelList]: Loading pending channel details.SELECT channels.name, pending.channel_id, user_id, pending.join_count, supporters.join_count, pending.unique_join_count, pending.first_init, pending.check_start_ts FROM pending,supporters,channels WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND pending.status = 1;
+cservice::logAdminMessage> Unable to locate debug channel on network!
+Loaded pending channels, there are currently 0 channels being recorded.
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::processDBUpdates]:sqlQuery: SELECT id,name,flags,mass_deop_pro,flood_pro,url,description,comment,keywords,registered_ts,channel_ts,channel_mode,userflags,last_updated,limit_offset,limit_period,limit_grace,limit_max,max_bans,no_take,now()::abstime::int4 as db_unixtime FROM channels WHERE last_updated >= 1477962722 AND registered_ts <> 0
+*** [CMaster::updateUsers]: sqlQuery: SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname,now()::abstime::int4 as db_unixtime FROM users WHERE last_updated >= 1477963262
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::updateLevels]: sqlQuery: SELECT channel_id,user_id,access,flags,suspend_expires,suspend_level,suspend_by,added,added_by,last_Modif,last_Modif_By,last_Updated,suspend_reason,now()::abstime::int4 as db_unixtime FROM levels WHERE last_updated >= 1477962722
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::checkIncomings> SELECT channels.id, channels.name, supporters.user_id, users.user_name, supporters.noticed FROM pending,supporters,channels,users WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND users.id = pending.manager_id AND pending.status = 0 AND supporters.support = '?'
+*** [CMaster::loadPendingChannelList]: Loading pending channel details.SELECT channels.name, pending.channel_id, user_id, pending.join_count, supporters.join_count, pending.unique_join_count, pending.first_init, pending.check_start_ts FROM pending,supporters,channels WHERE pending.channel_id = supporters.channel_id AND channels.id = pending.channel_id AND pending.status = 1;
+cservice::logAdminMessage> Unable to locate debug channel on network!
+Loaded pending channels, there are currently 0 channels being recorded.
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::logAdminMessage> Unable to locate debug channel on network!
+*** [CMaster::processDBUpdates]:sqlQuery: SELECT id,name,flags,mass_deop_pro,flood_pro,url,description,comment,keywords,registered_ts,channel_ts,channel_mode,userflags,last_updated,limit_offset,limit_period,limit_grace,limit_max,max_bans,no_take,now()::abstime::int4 as db_unixtime FROM channels WHERE last_updated >= 1477962722 AND registered_ts <> 0
+*** [CMaster::updateUsers]: sqlQuery: SELECT users.id,users.user_name,users.password,users.url,users.language_id,users.flags,users.last_updated_by,users.last_updated,users.email,users.maxlogins,users.verificationdata,users.totp_key,users.hostname,now()::abstime::int4 as db_unixtime FROM users WHERE last_updated >= 1477963442
+*** [CMaster::updateLevels]: sqlQuery: SELECT channel_id,user_id,access,flags,suspend_expires,suspend_level,suspend_by,added,added_by,last_Modif,last_Modif_By,last_Updated,suspend_reason,now()::abstime::int4 as db_unixtime FROM levels WHERE last_updated >= 1477962722
+cservice::logAdminMessage> Unable to locate debug channel on network!
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cservice::OnTimer::sqlQuery> SELECT created_ts,contents FROM webnotices WHERE created_ts <= now()::abstime::int4 ORDER BY created_ts
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::checkIPR::sqlQuery> SELECT value,expiry,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NOT NULL) AND (expiry <> 0)) AND (type = 1)
+cservice::checkIPR::sqlQuery> SELECT value,added FROM ip_restrict WHERE (user_id = 1) AND ((expiry IS NULL) OR (expiry = 0)) AND (type = 1)
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cmaster::getLevelRecord> Cache hit for user-id:chan-id 1:1
+cservice::logAdminMessage> Unable to locate relay channel on network!
+xServer::doShutdown> Removed 0 local clients
+xServer::doShutdown> Removed 2 network clients
+xServer::doShutdown> Removed 0 channels
+xServer::doShutdown> Removed 2 servers...
+xServer::doShutdown> Removed 0 glines
+xServer::doShutdown> Removed 2 timers
+xServer::doShutdown> Disconnecting...
+ConnectionManager::Disconnect> Scheduling connection for removal: Host: 198.50.192.218, IP: 198.50.192.218, localPort: 51762, remotePort: 8888, sockFD: 8, state: connected
+

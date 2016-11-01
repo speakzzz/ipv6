@@ -1,0 +1,52 @@
+PASS :hub
+SERVER Dev.EvilNet.Org 1 1477608201 1477962723 J10 ABAP] +6 :Test Server
+AB N Christi 1 1477861565 Christi 162-229-35-207.lightspeed.jcsnms.sbcglobal.net +iwxr Christi Ci5SPP ABAAM :Christi
+AB N Speakz 1 1477888560 speakz c-24-60-219-135.hsd1.ma.comcast.net +oiwgxWar Speakz AYPNuH ABAAN :Felix Alcantara
+AB PRIVS ABAAN CHAN_LIMIT SHOW_INVIS SHOW_ALL_INVIS KILL LOCAL_KILL REHASH RESTART DIE GLINE LOCAL_GLINE JUPE LOCAL_JUPE OPMODE WHOX 
+AB PRIVS ABAAN SEE_CHAN PROPAGATE DISPLAY SEE_OPERS WIDE_GLINE LIST_CHAN FORCE_OPMODE CHECK WHOIS_NOTICE HIDE_OPER ADMIN SHUN LOCAL_SHUN WIDE_SHUN 
+AB PRIVS ABAAN REMOTEREHASH LOCAL_ZLINE WIDE_ZLINE 
+AB B #Olympus 1477934448 +tn ABAAN:o
+AB B #evilnet 1477616527 +tnR ABAAN,ABAAM
+AB T #evilnet E!service@evilnet.org 1477616527 1477617334 :*** Congratulations! Your channel application has been accepted! ***
+AB EB 
+AB EA 
+AB G !1477962738.318987 channels.evilnet.org 1477962738.318987
+ABAAN P AzAAA :set host hello.com
+AB Z AB :I am the King, bow before me!
+AB G !1477962828.659291 channels.evilnet.org 1477962828.659291
+AB Z AB :I am the King, bow before me!
+AB Z AB :I am the King, bow before me!
+AB G !1477962918.917810 channels.evilnet.org 1477962918.917810
+AB Z AB :I am the King, bow before me!
+AB G !1477963009.73309 channels.evilnet.org 1477963009.73309
+AB Z AB :I am the King, bow before me!
+AB Z AB :I am the King, bow before me!
+AB G !1477963099.94596 channels.evilnet.org 1477963099.94596
+AB Z AB :I am the King, bow before me!
+ABAAN Q :Quit
+AB G !1477963189.13766 channels.evilnet.org 1477963189.13766
+AB N Speakz 1 1477963188 speakz c-24-60-219-135.hsd1.ma.comcast.net +iwx AYPNuH ABAAO :Felix Alcantara
+ABAAO J #evilnet 1477616527
+ABAAO C #Olympus 1477963201
+AB Z AB :I am the King, bow before me!
+ABAAO M #Olympus +tn 1477963201
+ABAAO P e@channels.evilnet.org :login speakz temPass
+ABAAO P AzAAA :set hostname evilnet.org
+AB Z AB :I am the King, bow before me!
+AB G !1477963279.785301 channels.evilnet.org 1477963279.785301
+ABAAO P AzAAA :set host blahblah.com
+AB Z AB :I am the King, bow before me!
+AB G !1477963369.667232 channels.evilnet.org 1477963369.667232
+ABAAO P AzAAA :set host testlab.com
+AB Z AB :I am the King, bow before me!
+AB Z AB :I am the King, bow before me!
+AB G !1477963459.805614 channels.evilnet.org 1477963459.805614
+AB Z AB :I am the King, bow before me!
+AB G !1477963549.960147 channels.evilnet.org 1477963549.960147
+AB Z AB :I am the King, bow before me!
+AB Z AB :I am the King, bow before me!
+AB G !1477963640.215682 channels.evilnet.org 1477963640.215682
+AB Z AB :I am the King, bow before me!
+AB G !1477963730.252038 channels.evilnet.org 1477963730.252038
+AB Z AB :I am the King, bow before me!
+ABAAO P AzAAA :shutdown FUCK YOU
